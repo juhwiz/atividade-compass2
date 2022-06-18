@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\julia\\Downloads\\mysql-connector-java-8.0.17.jar",
+        "c:\\Users\\julia\\Desktop\\c3p0-0.9.5.4.jar",
+        "c:\\Users\\julia\\Desktop\\mchange-commons-java-0.2.16.jar"
+    ]
+}
