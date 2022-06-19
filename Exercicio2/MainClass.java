@@ -26,12 +26,17 @@ public class MainClass {
             MovieDAO movieDAO = new MovieDAO(connection);
             
             List<Movie> movieList = movieDAO.select(min, max);
-
-            movieList.stream().forEach(mv -> {
+            if(!movieList.isEmpty()){
+                movieList.stream().forEach(mv -> {
                 
-                System.out.println(mv);
-                
-            });
+                    System.out.println(mv);
+                    
+                });
+            }
+            else{
+                System.out.println("Nenhum filme foi selecionado");
+            }
+            
 
         }
 
