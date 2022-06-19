@@ -37,24 +37,24 @@ public class ProductControl {
                     }
                 }
             }
-            //ALTERAR PRODUTO
-            if (escolha == 2){
+            else if (escolha == 2){ //ALTERAR PRODUTO
                 try(Connection connection = new ConnectionFactory().recoverConnection()){
                     ProductDAO produtoDAO = new ProductDAO(connection);
                     produtoDAO.alter(productList.returnList().get(qt-3));
                 }
 
             }
-            //EXCLUIR PRODUTO
-            if(escolha == 3){
+            else if(escolha == 3){ //EXCLUIR PRODUTO
                 try(Connection connection = new ConnectionFactory().recoverConnection()){
                     ProductDAO productDAO = new ProductDAO(connection);
                     productDAO.delete(productList.returnList().get(qt-2));
                 }
             }
-            // SAIR
-            if(escolha == 0){
+            else if(escolha == 0){ // SAIR
                 System.exit(0);
+            }
+            else{
+                System.out.println("Escolha uma das opções entre 0 à 3");
             }
         
         }
